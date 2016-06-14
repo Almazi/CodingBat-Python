@@ -79,3 +79,52 @@ makes10(1, 9) → true
 '''/
 def makes10(a, b):
   return True if a == 10 or b == 10 or a + b == 10 else False
+
+/'''
+near_hundred
+Given an int n, return True if it is within 10 of 100 or 200.
+Note: abs(num) computes the absolute value of a number.
+
+near_hundred(93) → True
+near_hundred(90) → True
+near_hundred(89) → False
+'''/
+def near_hundred(n):
+  return True if (abs(n-100) <= 10 or abs(n-200) <= 10) else False
+
+/'''
+posNeg
+Given 2 int values, return true if one is negative and one is positive.
+Except if the parameter "negative" is true,
+then return true only if both are negative.
+
+posNeg(1, -1, false) → true
+posNeg(-1, 1, false) → true
+posNeg(-4, -5, true) → true
+'''/
+
+def pos_neg(a, b, negative):
+  if negative is False:
+    return ((a < 0 and b > 0) or (a > 0 and b < 0))
+  elif (negative is True):
+    return (a < 0 and b < 0)
+#or
+def pos_neg(a, b, negative):
+  if negative:
+    return (a < 0 and b < 0)
+  else:
+    return ((a < 0 and b > 0) or (a > 0 and b < 0))
+
+
+
+/'''
+
+'''/
+
+/'''
+
+'''/
+
+/'''
+
+'''/
